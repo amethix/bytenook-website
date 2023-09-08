@@ -3501,7 +3501,9 @@ input, select, textarea {
 
 			#banner .content header {
 				display: inline-block;
-				vertical-align: middle;
+				vertical-align: top;
+				margin: 15%;
+				margin-top: 0%;
 			}
 
 				#banner .content header h2 {
