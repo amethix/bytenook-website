@@ -3086,8 +3086,9 @@ input, select, textarea {
 			-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
 			-ms-transition: -ms-transform 1s ease, opacity 1s ease;
 			transition: transform 1s ease, opacity 1s ease;
-			background: rgba(23, 24, 32, 0.95);
-			border-style: solid;
+			background: rgba(88, 88, 88, 0.95);
+			color: #fff;
+			/* border-style: solid; */
 			opacity: 1;
 			position: absolute;
 		}
@@ -3238,9 +3239,28 @@ input, select, textarea {
 			.wrapper.style2 input[type="reset"].primary,
 			.wrapper.style2 input[type="button"].primary,
 			.wrapper.style2 .button.primary {
-				background-color: #ffffff;
-				color: #0976b2 !important;
+				background-color: #d99b0a;
+				color: #ffffff !important;
+				font-weight: 800;
 			}
+
+			.wrapper.style2 input[type="submit"].secondary,
+			.wrapper.style2 input[type="reset"].secondary,
+			.wrapper.style2 input[type="button"].secondary,
+			.wrapper.style2 .button.secondary {
+				background-color: #d99b0a;
+				color: #ffffff !important;
+				font-weight: 800;
+			}
+
+/* Hover styles */
+.wrapper.style2 input[type="submit"].secondary:hover,
+.wrapper.style2 input[type="reset"].secondary:hover,
+.wrapper.style2 input[type="button"].secondary:hover,
+.wrapper.style2 .button.secondary:hover {
+    background-color: #d99b0a; /* Set the background color to match the original color */
+}
+
 
 				.wrapper.style2 input[type="submit"].primary:hover, .wrapper.style2 input[type="submit"].primary:active,
 				.wrapper.style2 input[type="reset"].primary:hover,
