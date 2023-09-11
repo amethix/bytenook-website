@@ -4268,110 +4268,106 @@ body.is-touch #banner {
 
 /* Image timeline */
 .timeline__wrapper {
-  margin-top: 5rem !important;
-  margin-bottom: 10rem !important;
+  margin: 3rem auto;
+  padding: 0 40px;
   overflow: hidden;
+}
+.timeline ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-flow: row;
+  width: 900px;
+  margin: 0 auto;
+  padding-left: 0 !important;
 }
 .timeline ul li {
   list-style-type: none;
-  position: relative;
-  width: 6px;
-  margin: 0 auto;
-  padding-top: 50px;
-}
-.timeline ul li::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) rotate(45deg);
-  border-radius: 100%;
-  z-index: 2;
+  margin: 50px 0;
+  padding-left: 0;
 }
 .timeline ul li div {
-  position: relative;
-  bottom: 0;
   width: 400px;
   height: 380px;
   padding: 20px;
   background: #fff;
-  box-shadow: 4px 13px 30px 1px rgb(221, 221, 221);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  overflow: hidden;
 }
-
+.timeline ul li:nth-of-type(even) > div {
+  margin-top: -30px;
+}
 .timeline ul li div img {
   width: 100%;
   object-fit: cover;
 }
-
-.timeline ul li:nth-of-type(odd) > div {
-  left: 45px;
+.timeline ul li:nth-child(1) > div {
+  transform: translate3d(-600px, -10px, 0) rotate(360deg);
+  transition: all 0.6s ease-in-out;
 }
-.timeline ul li:nth-of-type(even) > div {
-  left: -439px;
+.timeline ul li:nth-child(2) > div {
+  transform: translate3d(600px, -10px, 0) rotate(-320deg);
+  transition: all 1s ease-in-out;
 }
-.timeline ul li div {
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-  overflow: hidden;
+.timeline ul li:nth-child(3) > div {
+  transform: translate3d(-600px, -10px, 0) rotate(280deg);
+  transition: all 0.6s ease-in-out;
 }
-.timeline ul li:nth-child(1) div {
-  transform: translate3d(400px, -10px, 0) rotate(360deg);
+.timeline ul li:nth-child(4) > div {
+  transform: translate3d(600px, -10px, 0) rotate(-220deg);
+  transition: all 1s ease-in-out;
 }
-.timeline ul li:nth-child(2) div {
-  transform: translate3d(-400px, -10px, 0) rotate(-300deg);
-}
-.timeline ul li:nth-child(3) div {
-  transform: translate3d(400px, -10px, 0) rotate(220deg);
-}
-.timeline ul li:nth-child(4) div {
-  transform: translate3d(-400px, -10px, 0) rotate(-180deg);
-}
-.timeline ul li.in-view div {
+.timeline ul li.in-view > div {
   transform: none;
   visibility: visible;
   opacity: 1;
 }
 
-@media screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
   .timeline__wrapper {
-    margin-top: 2rem !important;
-    margin-bottom: 6rem !important;
+    margin-bottom: 2rem !important;
+    padding: 0 15px;
+  }
+  .timeline ul {
+    grid-template-columns: 1fr;
+    gap: 0;
+    width: 100%;
   }
   .timeline ul li {
-    padding-top: 25px;
+    margin: 0;
+    margin-bottom: 2rem;
   }
   .timeline ul li div {
-    width: 250px;
-    height: 250px;
-    flex-direction: column;
-  }
-  .timeline ul li div div {
-    width: 80%;
-    margin: 10px;
+    width: 100% !important;
+    height: 600px;
   }
   .timeline ul li:nth-of-type(even) > div {
-    left: -289px;
+    margin-top: 0px;
   }
-  .timeline ul li:nth-of-type(odd) > div {
-    left: -0px;
+  .timeline ul li div img {
+    height: 450px !important;
   }
 }
 
-@media screen and (max-width: 600px) {
-  .timeline ul li {
-    margin-left: 20px;
-  }
+/* Responsive */
+@media only screen and (max-width: 600px) {
   .timeline ul li div {
-    width: calc(100vw - 91px);
-    height: 220px;
-    padding: 14px;
+    width: 100% !important;
+    height: 350px;
   }
-  .timeline ul li:nth-of-type(even) > div {
-    left: 0px;
+  .timeline ul li div img {
+    height: 250px !important;
   }
-  .timeline ul li:nth-of-type(odd) > div {
-    left: 0px;
+}
+
+@media only screen and (max-width: 400px) {
+  .timeline ul li div {
+    width: 100% !important;
+    height: 250px;
+  }
+  .timeline ul li div img {
+    height: 180px !important;
   }
 }
