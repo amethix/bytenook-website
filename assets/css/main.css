@@ -4344,6 +4344,7 @@ body.is-touch #banner {
   }
   .timeline ul li div {
     width: 250px;
+    height: 250px;
     flex-direction: column;
   }
   .timeline ul li div div {
@@ -4352,6 +4353,9 @@ body.is-touch #banner {
   }
   .timeline ul li:nth-of-type(even) > div {
     left: -289px;
+  }
+  .timeline ul li:nth-of-type(odd) > div {
+    left: -0px;
   }
 }
 
@@ -4365,11 +4369,9 @@ body.is-touch #banner {
     padding: 14px;
   }
   .timeline ul li:nth-of-type(even) > div {
-    /* left: 20px; */
     left: 0px;
   }
   .timeline ul li:nth-of-type(odd) > div {
-    /* left: 20px; */
     left: 0px;
   }
 }
