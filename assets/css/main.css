@@ -4275,26 +4275,18 @@ body.is-touch #banner {
 .timeline ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
   grid-auto-flow: row;
-  /* width: 900px; */
   width: 1200px;
-  margin: 0 auto;
+  margin: 50px auto;
   padding-left: 0 !important;
 }
 .timeline ul li {
-  /* list-style-type: none;
-  margin: 50px 0;
-  padding-left: 0; */
-
-margin: 50px 0;
-padding-left: 25px;
-width: 665px;
-padding-bottom: 70px;
-
-
+  list-style-type: none;
+  margin: 0 auto;
+  margin-bottom: 3rem;
 }
 .timeline ul li div {
-  /* width: 400px; */
   height: 580px;
   padding: 20px;
   background: #fff;
@@ -4303,29 +4295,18 @@ padding-bottom: 70px;
   visibility: hidden;
   opacity: 0;
   overflow: hidden;
-
-}
-.timeline ul li:nth-of-type(even) > div {
-  margin-top: -30px;
 }
 .timeline ul li div img {
   width: 100%;
   object-fit: cover;
 }
-.timeline ul li:nth-child(1) > div {
-  transform: translate3d(-600px, -10px, 0) rotate(360deg);
+.timeline ul li:nth-of-type(odd) > div {
+  transform: translate3d(-600px, -10px, 0) rotate(-360deg);
   transition: all 0.6s ease-in-out;
 }
-.timeline ul li:nth-child(2) > div {
-  transform: translate3d(600px, -10px, 0) rotate(-320deg);
-  transition: all 1s ease-in-out;
-}
-.timeline ul li:nth-child(3) > div {
-  transform: translate3d(-600px, -10px, 0) rotate(280deg);
-  transition: all 0.6s ease-in-out;
-}
-.timeline ul li:nth-child(4) > div {
-  transform: translate3d(600px, -10px, 0) rotate(-220deg);
+.timeline ul li:nth-of-type(even) > div {
+  margin-top: -30px;
+  transform: translate3d(600px, -10px, 0) rotate(-360deg);
   transition: all 1s ease-in-out;
 }
 .timeline ul li.in-view > div {
