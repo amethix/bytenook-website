@@ -2290,7 +2290,8 @@ header.major {
 }
 
 header.major:after {
-  background: #0976b2;
+  background: #fda317;
+  /* background: #0976b2; */
   content: "";
   display: inline-block;
   height: 0.2em;
@@ -3317,7 +3318,8 @@ body.is-touch .spotlight {
 }
 
 .wrapper.style2 {
-  background: #0976b2;
+  /* background: #0976b2; */
+  background: rgb(134, 134, 134);
 }
 
 .wrapper.style2 input[type="text"]:focus,
